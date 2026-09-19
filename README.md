@@ -1,8 +1,9 @@
 1. Title and Summary(Rag Based Chatbot)
 in this chatbot we are chat with the LLM which is connected with the external source pdf of the company and we can ask question from the pdf and LLM will generate a brief answer.
-2.Techstack
+
+2. Techstack
 we have used Langchain , LangGraph , pinecone(vectorDB), Google gemini model(Embeddings) , groq Model (generating context aware answer) , Pydantic , Retriver .
-3.Architecture 
+3. Architecture 
 
 question → retrieve → score ≥ 0.70? → generate → answer
                           └ no → fallback
