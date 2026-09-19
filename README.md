@@ -19,7 +19,7 @@ question → retrieve → score ≥ 0.70? → generate → answer
 - Endpoint: POST /chat
 - Request body: {"question": "..."}
 - Response: answer, confidence, and the retrieved chunks (with page and score)
-7. Design decisions
+6. Design decisions
 - Chunk size 1000, overlap 200 (because of the capturing the meaning so that meaning of text cannot be broken)
 - Embedding dimension 3072 (or 768, if you can switch)
 - Threshold 0.70: I measured it . In-scope scores were 0.76 to 0.83, AI-related but out-of-book 0.62 to 0.65, unrelated 0.50 to 0.55.
