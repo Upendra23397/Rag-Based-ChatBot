@@ -17,8 +17,15 @@ question → retrieve → score ≥ 0.70? → generate → answer
 
 5. API usage
 - Endpoint: POST /chat
+**Request**
+
+![Swagger request](docs/images/inputAPIExample.png)
+
 - Request body: {"question": "..."}
 - Response: answer, confidence, and the retrieved chunks (with page and score)
+**Response**
+
+![Swagger response](docs/images/outputAPIExample.png)
 7. Design decisions
 - Chunk size 1000, overlap 200 (because of the capturing the meaning so that meaning of text cannot be broken)
 - Embedding dimension 3072 (or 768, if you can switch)
