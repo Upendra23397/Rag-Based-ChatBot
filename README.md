@@ -1,19 +1,6 @@
-1. Title and Summary(Rag Based Chatbot)
-in this chatbot we are chat with the LLM which is connected with the external source pdf of the company and we can ask question from the pdf and LLM will generate a brief answer.
-2.Techstack
-we have used Langchain , LangGraph , pinecone(vectorDB), Google gemini model(Embeddings) , groq Model (generating context aware answer) , Pydantic , Retriver .
-3.Architecture 
+# Agentic AI eBook RAG Chatbot
 
-question → retrieve → score ≥ 0.70? → generate → answer
-                          └ no → fallback
-4. Setup instructions
-- Clone the repo from the GtiHub
-- Create and activate a venv
-- pip install -r requirements.txt
-- Copy .env.example to .env and fill in the keys. List every variable name (Google, Groq, Pinecone, index name, model name)
-- Run ingestion once: python -m app.ingest (so that embeddings are generated and once the embeddings are store in vectoreDB run the main.py file )
-- Start the server: python -m uvicorn app.main:app --reload
-- Open http://127.0.0.1:8000/docs(check the question written in docs file)
+A Retrieval-Augmented Generation (RAG) chatbot that answers questions **strictly from the Agentic AI eBook** ([PDF](https://konverge.ai/pdf/Ebook-Agentic-AI.pdf)). It retrieves the most relevant parts of the PDF, generates a short answer from them, and returns the answer together with the retrieved chunks and a confidence score. If the eBook does not contain the answer, the bot says so instead of guessing.
 
 5. API usage
 - Endpoint: POST /chat
